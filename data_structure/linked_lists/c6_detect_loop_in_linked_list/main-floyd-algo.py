@@ -11,11 +11,11 @@ fulfilled, the function returns True.
 
 from LinkedList import LinkedList
 # Floyd's Cycle Finding Algorithm
-def detect_loop(lst):
+def detect_loop(lst): # O(n)
     # Keep two iterators
     onestep = lst.get_head()
     twostep = lst.get_head()
-    while onestep and twostep and twostep.next_element:
+    while onestep and twostep and twostep.next_element: # O(n)
         onestep = onestep.next_element  # Moves one node at a time
         twostep = twostep.next_element.next_element  # Skips a node
         if onestep == twostep:  # Loop exists

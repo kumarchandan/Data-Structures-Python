@@ -9,14 +9,14 @@ from Node import Node
 # Node class  { int data ; Node next_element;}
 
 
-def detect_loop(lst):
+def detect_loop(lst): # O(n^2)
   # Write your code here
   visited = []
   is_loop = False
   
   curr = lst.get_head()
-  while curr:
-    if curr in visited:
+  while curr: # O(n)
+    if curr in visited: # O(n)
       is_loop = True
       return is_loop
     else:
