@@ -10,10 +10,10 @@ from Stack import MyStack
 '''
 def evaluate_post_fix(exp):
     # Write your code here
-    operators = ['*', '+', '-', '/']
     stack = MyStack()
-    for char in exp:
-        if char not in operators:
+    arr = exp.split(',')
+    for char in arr:
+        if char.isdigit():
             stack.push(char)
         else:
             operand_2 = stack.pop()
@@ -24,5 +24,6 @@ def evaluate_post_fix(exp):
     return int(stack.pop())
 
 
-exp = '642/+' #"921*-8-4+"
+# exp = '642/+' #"921*-8-4+"
+exp = '9,4,2,+,*,6,14,7,/,+,*'
 print(evaluate_post_fix(exp))
