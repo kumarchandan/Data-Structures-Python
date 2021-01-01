@@ -65,4 +65,5 @@ else:
     g.add_edge(1, 3)
     g.add_edge(1, 4)
 
+    g.print_graph()
     print(bfs_traversal(g, 0))
